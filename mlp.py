@@ -1,3 +1,4 @@
+# Convolutional Neural Network
 import pandas as pd
 import numpy as np
 from tensorflow.keras.models import Sequential
@@ -27,7 +28,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 embedding_dim = 50
 model = Sequential()
 model.add(Embedding(input_dim=max_words, output_dim=embedding_dim, input_length=max_len))
-model.add(Flatten())  # Flatten layer to convert the 3D embedding to 2D
+model.add(Flatten())  
 model.add(Dense(units=128, activation='relu'))
 model.add(Dense(units=64, activation='relu'))
 model.add(Dense(units=1, activation='sigmoid'))
