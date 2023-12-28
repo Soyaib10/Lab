@@ -44,4 +44,3 @@ model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs, validation_spl
 # Evaluate the model
 accuracy = model.evaluate(X_test, y_test)[1]
 print(f"Test Accuracy: {accuracy}")
-
